@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    >
+    <!-- 必需要加外面这个框且在DialogFragment::onCreateView()中修改背景透明和在DialogFragment::onStart()中修改窗口为全屏，
+         否则弹出对话框动画的效果是对话框只在自身大小的区域内活动且超出区域部分不显示，
+         加了外面这个框且为全屏则其内容（实际对话框可见区域）动画活动时无被遮蔽情况 -->
+    <LinearLayout
+        android:id="@+id/linear_background"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_base_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="23.33dp"
+        android:paddingRight="23.33dp"
+        android:paddingTop="23.33dp"
+        android:paddingBottom="23.33dp"
+        >
+
+        <ImageView
+            android:id="@+id/image_icon"
+            android:src="@drawable/login_logo"
+            style="@style/dialog_icon"
+            />
+
+        <TextView
+            android:id="@+id/text_title"
+            android:text="开始一个会话！"
+            style="@style/dialog_title"
+            />
+
+        <TextView
+            android:id="@+id/text_content"
+            android:text="I am content"
+            style="@style/dialog_message"
+            />
+
+        <Button
+            android:id="@+id/button_ok"
+            android:layout_width="match_parent"
+            android:layout_height="43.33dp"
+            android:layout_marginTop="23.33dp"
+            android:background="@drawable/selector_btn_green"
+            android:textColor="#ffffff"
+            android:textSize="16.67sp"
+            android:text="Ok"
+            />
+
+    </LinearLayout>
+</RelativeLayout>
