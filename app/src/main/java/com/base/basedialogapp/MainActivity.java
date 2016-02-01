@@ -25,9 +25,9 @@ public class MainActivity extends AppCompatActivity {
                 baseDialog
                         .bulidBackground(Color.WHITE)
                         .bulidTitle("我的标题",Color.BLUE)
-                        .bulidContent("我的内容",Color.BLACK)
-                        .bulidIcon(R.drawable.login_logo)
-                        .bulidButtonOk(Color.BLACK,"我的ok",Color.WHITE)
+                        .bulidContent("我的内容",Color.GREEN)
+                        .bulidIcon(R.mipmap.ic_launcher)
+                        .bulidButtonOk(Color.RED,"我的ok",Color.WHITE)
                         .bulidButtonCancel(Color.BLUE,"我的cancel", Color.WHITE);
                 baseDialog.show(getSupportFragmentManager(), "");
             }
